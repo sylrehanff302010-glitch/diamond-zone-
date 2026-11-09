@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIAMOND ZONE</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#071426;color:white}
+header{background:#102c50;padding:20px;text-align:center;border-bottom:2px solid #19baff}
+.logo{font-size:29px;font-weight:bold;color:#48caff;letter-spacing:2px}
+header p{color:#d3eaff}
+.banner{margin:18px;padding:30px 15px;text-align:center;border-radius:16px;background:linear-gradient(130deg,#0755a0,#071426)}
+.banner h1{font-size:27px}
+.banner p{color:#b9e5ff}
+h2{text-align:center;color:#43c5ff;margin-top:30px}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:15px}
+.product{background:#132b49;padding:18px 8px;border:1px solid #23669c;border-radius:12px;text-align:center}
+.product h3{font-size:16px}
+.price{color:#42d5ff;font-weight:bold}
+button{background:#087fe0;color:white;border:0;border-radius:8px;padding:11px 18px;font-weight:bold;cursor:pointer}
+.product button{margin-top:10px}
+.order{margin:18px;padding:20px;background:#122945;border-radius:14px}
+input,select{width:100%;padding:13px;margin:10px 0;border-radius:8px;border:1px solid #3984bb;background:#071426;color:white}
+.order button{width:100%;margin-top:12px}
+footer{text-align:center;padding:25px;background:#102c50;color:#b9dfff;margin-top:30px}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">💎 DIAMOND ZONE</div>
+<p>YOUR TRUSTED TOP-UP ZONE</p>
+</header>
 
+<section class="banner">
+<h1>WELCOME TO DIAMOND ZONE</h1>
+<p>Fast • Secure • Reliable</p>
+<p>Free Fire Top-Up Store</p>
+</section>
+
+<h2>💎 DIAMOND PACKAGES</h2>
+<section class="products">
+<div class="product"><h3>💎 25 Diamonds</h3><p class="price">৳ 25</p><button onclick="choose('25 Diamonds')">Buy Now</button></div>
+<div class="product"><h3>💎 50 Diamonds</h3><p class="price">৳ 40</p><button onclick="choose('50 Diamonds')">Buy Now</button></div>
+<div class="product"><h3>💎 115 Diamonds</h3><p class="price">৳ 80</p><button onclick="choose('115 Diamonds')">Buy Now</button></div>
+<div class="product"><h3>💎 240 Diamonds</h3><p class="price">৳ 160</p><button onclick="choose('240 Diamonds')">Buy Now</button></div>
+<div class="product"><h3>💎 610 Diamonds</h3><p class="price">৳ 400</p><button onclick="choose('610 Diamonds')">Buy Now</button></div>
+<div class="product"><h3>💎 1240 Diamonds</h3><p class="price">৳ 800</p><button onclick="choose('1240 Diamonds')">Buy Now</button></div>
+</section>
+
+<h2>🛒 PLACE YOUR ORDER</h2>
+<section class="order">
+<form onsubmit="placeOrder(event)">
+<label>Free Fire Player UID</label>
+<input id="uid" type="number" placeholder="Enter Player UID" required>
+
+<label>Select Package</label>
+<select id="package" required>
+<option value="">Select Diamonds</option>
+<option>25 Diamonds</option>
+<option>50 Diamonds</option>
+<option>115 Diamonds</option>
+<option>240 Diamonds</option>
+<option>610 Diamonds</option>
+<option>1240 Diamonds</option>
+</select>
+
+<label>Payment Method</label>
+<select id="payment">
+<option>Demo Payment</option>
+<option>bKash (Demo)</option>
+<option>Nagad (Demo)</option>
+</select>
+<button type="submit">CONFIRM DEMO ORDER</button>
+</form>
+</section>
+
+<footer>
+<h3>💎 DIAMOND ZONE</h3>
+<p>Thank you for visiting our store.</p>
+<p>© 2026 DIAMOND ZONE</p>
+</footer>
+
+<script>
+function choose(name){
+document.getElementById('package').value=name;
+document.getElementById('uid').focus();
+}
+function placeOrder(e){
+e.preventDefault();
+alert('Demo order created! Real payment and delivery are not connected yet.');
+}
+</script>
+</body>
+  </html>
